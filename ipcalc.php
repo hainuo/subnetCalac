@@ -138,21 +138,21 @@ if (preg_match('/^(00001010)|(101011000001)|(1100000010101000)/im',$bin_net)){
 }
 
 // Print Results
-tr('Address:',"<font color=\"blue\">$dq_host</font>",
+tr('Address 地址:',"<font color=\"blue\">$dq_host</font>",
 	'<font color="brown">'.dotbin($bin_host,$cdr_nmask).'</font>');
-tr('Netmask:','<font color="blue">'.bintodq($bin_nmask)." = $cdr_nmask</font>",
+tr('Netmask 子网掩码:','<font color="blue">'.bintodq($bin_nmask)." = $cdr_nmask</font>",
 	'<font color="red">'.dotbin($bin_nmask, $cdr_nmask).'</font>');
 tr('Wildcard:', '<font color="blue">'.bintodq($bin_wmask).'</font>',
 	'<font color="brown">'.dotbin($bin_wmask, $cdr_nmask).'</font>');
-tr('Network:', '<font color="blue">'.bintodq($bin_net).'</font>',
+tr('Network 网关:', '<font color="blue">'.bintodq($bin_net).'</font>',
 	"<font color=\"brown\">$dotbin_net</font>","<font color=\"Green\">(Class $class)</font>");
-tr('Broadcast:','<font color="blue">'.bintodq($bin_bcast).'</font>',
+tr('Broadcast 广播地址:','<font color="blue">'.bintodq($bin_bcast).'</font>',
 	'<font color="brown">'.dotbin($bin_bcast, $cdr_nmask).'</font>');
-tr('HostMin:', '<font color="blue">'.bintodq($bin_first).'</font>',
+tr('HostMin 最小ip地址:', '<font color="blue">'.bintodq($bin_first).'</font>',
 	'<font color="brown">'.dotbin($bin_first, $cdr_nmask).'</font>');
-tr('HostMax:', '<font color="blue">'.bintodq($bin_last).'</font>',
+tr('HostMax 最大ip地址:', '<font color="blue">'.bintodq($bin_last).'</font>',
 	'<font color="brown">'.dotbin($bin_last, $cdr_nmask).'</font>');
-@tr('Hosts/Net:', '<font color="blue">'.$host_total.'</font>', "$special");
+@tr('Hosts/Net 网段中容纳主机数量:', '<font color="blue">'.$host_total.'</font>', "$special");
 print "$end";
 
 function binnmtowm($binin){
